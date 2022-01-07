@@ -17,11 +17,7 @@ const PrivateLayout = () => {
     const dispatch = useDispatch()
     const navigate=useNavigate()
 
-    const handler=()=>{
-        app.auth().signOut()
-        dispatch(logoutAction())
-        navigate("/")
-    }
+    
 
     useEffect(()=>{
         app.auth().onAuthStateChanged((user)=>{
@@ -34,7 +30,7 @@ const PrivateLayout = () => {
                     navigate("/")
                 }
         })
-      },[])
+    },[])
 
 
 
@@ -44,9 +40,9 @@ const PrivateLayout = () => {
         ?(<div>
             
             <Navbar elements={privateNavbar} />
-            <button className="btn btn-danger" onClick={handler}>
-                Salir
-            </button>
+
+            <p>Bienvenido { state.user.displayName }</p>
+            
             
             <Outlet/>
             <Footer/>

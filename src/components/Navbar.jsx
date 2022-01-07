@@ -1,7 +1,28 @@
 import {Link} from "react-router-dom"
 import logo from "../media/iconoddhtransparente.png";
+import { app } from "../service/firebase"
+import { useNavigate } from "react-router-dom"
+import { useEffect } from "react"
+import {  useDispatch ,useSelector  } from "react-redux"
+import {loggedAction,logoutAction} from "../actions/AuthorActions"
+import { privateNavbar } from "../utils/NavbarList";
+import PrivateLayout from "../layout/PrivateLayout";
+import userEvent from "@testing-library/user-event";
 
 const Navbar = ({elements}) => {
+
+    const state = useSelector(state=>state.auth)
+    const dispatch = useDispatch()
+    const navigate=useNavigate()
+
+    const handler=()=>{
+        app.auth().signOut()
+        dispatch(logoutAction())
+        navigate("/")
+    }
+
+    
+    
     return (
         <div>
 
@@ -41,6 +62,11 @@ const Navbar = ({elements}) => {
                     </li>
                     </ul>
                 </div>
+                
+                { state.user 
+                    ? <button className="btn btn-danger" onClick={handler}>Salir</button> 
+                    : null 
+                }
             </nav>
         </div>
     )

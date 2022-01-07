@@ -11,7 +11,7 @@ const QuestionsPrivate = ({question}) => {
         <div className='question'>
 
         
-            <p>{question.question}  - <small>{question.type}</small> <Link to={`/private/question/${question.id}`} className="button">
+            <p>{question.category} - {question.question}  - <small>{question.type}</small> <Link to={`/private/question/${question.id}`} className="button">
                 View Question
             </Link></p>
 
