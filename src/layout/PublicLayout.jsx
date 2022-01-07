@@ -7,6 +7,7 @@ import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { useDispatch , useSelector  } from "react-redux"
 import {loginAction ,loggedAction} from "../actions/AuthorActions"
+import imggoogle from "../media/googleLogo.png";
 
 
 const PublicLayout = () => {
@@ -45,7 +46,9 @@ useEffect(()=>{
     return (
         <div>
             <Navbar elements={publicNavbar}/>
-            <button onClick={handler}>Iniciar con Google</button>
+            
+
+            <button className="btn btn-light" style={{margin: "50px 0"}} onClick={handler}><img src={imggoogle} width={25} height={25}></img> Iniciar con Google</button>
             <Outlet/>
             <Footer/>
         </div>

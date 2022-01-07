@@ -13,7 +13,8 @@ import OneQuestionPagePublic from './pages/public/OneQuestionPagePublic';
 import QuestionsPagePublic from './pages/public/QuestionsPagePublic';
 import CreateQuestion from './pages/private/CreateQuestion';
 import MyQuestions from './pages/private/MyQuestions';
-
+import "bootswatch/dist/sandstone/bootstrap.min.css";
+import './index.css'
 
 
 function App() {
