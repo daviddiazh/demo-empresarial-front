@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 const FormAnswer = ({idQuestion}) => {
 
-    const state =useSelector(state=>state.auth)
+    const state = useSelector(state=>state.auth)
 
     const{form, formData, updateFormData} = useFormData();
 

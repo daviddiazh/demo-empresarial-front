@@ -46,10 +46,11 @@ export const Logueo = (props) => {
                 </button>
             </form>
             <button type='submit' onClick={() => setIsRegistrando(!isRegistrando) }>
-                    { isRegistrando 
+                { isRegistrando 
                     ? "¿Ya tienes cuenta? ¡Inicia sesión!" 
-                    : "¿No tienes cuenta? ¡Registrate, es gratis!"}
-                </button>
+                    : "¿No tienes cuenta? ¡Registrate, es gratis!"
+                }
+            </button>
         </div>
     )
 }

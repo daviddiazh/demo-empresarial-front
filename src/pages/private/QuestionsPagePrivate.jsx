@@ -23,7 +23,7 @@ const QuestionsPagePrivate = () => {
                 onChange={(e) => setFiltro(e.target.value.toUpperCase())}
             ></input>
 
-            <h1>private</h1>
+            <h1>Preguntas</h1>
             {error&& <h1>{error}</h1>}
             {questions && questions.filter( busqueda => busqueda.category.includes(filtro) || busqueda.type.includes(filtro) ).map((question)=>{
                 return(

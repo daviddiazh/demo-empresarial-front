@@ -14,7 +14,6 @@ const QuestionsPrivate = ({question}) => {
             <p>{question.category} - {question.question}  - <small>{question.type}</small> <Link to={`/private/question/${question.id}`} className="button">
                 View Question
             </Link></p>
-
             {/*<table>
                 <input
                     className="form-control  mb-3 "
