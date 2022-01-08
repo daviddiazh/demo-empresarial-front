@@ -4,34 +4,32 @@ import { Link } from "react-router-dom"
 const QuestionsPrivate = ({question}) => {  
 
     
-
-
-
     return(
-        <div className='question'>
+        <div className='question' style={{margin: "0 100px"}}>
 
-        
-            <p>{question.category} - {question.question}  - <small>{question.type}</small> <Link to={`/private/question/${question.id}`} className="button">
-                View Question
-            </Link></p>
-            {/*<table>
-                <input
-                    className="form-control  mb-3 "
-                    placeholder="Buscar estudiante"
-                    onChange={searchQuestion}
-                ></input>
-                <tr>
-                    <th>Pregunta</th>
-                    <th>Estado Pregunta</th>
-                    <th>Ver Pregunta</th>
-                </tr>
-                <tr>
-                    <td>{question.question}</td>
-                    <td>{question.type}</td>
-                    
-                </tr>
-            </table>*/}
+            <table className="table table-bordered table-striped">
 
+                <thead>
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Pregunta</th>
+                        <th>Estado Pregunta</th>
+                        <th>Ver Pregunta</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <td>{question.category}</td>
+                        <td>{question.question}</td>
+                        <td>{question.type}</td>
+                        <td>{<Link to={`/private/question/${question.id}`} className="btn btn-primary" style={{background: "#0d6efd", border: "none"}}>
+                            Ver Pregunta
+                        </Link>}</td>
+                    </tr>
+                </thead>
+                
+                
+            </table>
 
 
             

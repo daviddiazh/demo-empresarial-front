@@ -1,20 +1,18 @@
 export const publicNavbar=[
     {
-        titulo: 'Home',
+        titulo: 'Inicio',
         url:'/',
-    },
-    {
-        titulo: 'Login',
-        url:'/Login',
     },
 ];
 
 export const privateNavbar=[
     {
-        titulo: 'Home',
-        url:'/',    },
+        titulo: 'Inicio',
+        url:'/private/HomePage',    
+    },
+
     {
-        titulo: 'Questions',
-        url:'/questionpage',
+        titulo: 'Lista Preguntas',
+        url:'/private/QuestionsPage/',
     }
 ];

@@ -8,7 +8,7 @@ import { privateNavbar } from "../utils/NavbarList";
 import PublicLayout from "../layout/PublicLayout";
 import userEvent from "@testing-library/user-event";
 
-const Navbar = ({elements, links, linksPrivate}) => {
+const Navbar = ({elements}) => {
 
     const state = useSelector(state=>state.auth)
     const dispatch = useDispatch()
@@ -43,22 +43,20 @@ const Navbar = ({elements, links, linksPrivate}) => {
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
-                    <li className="nav-item active">
-                        <Link
-                        className="nav-link fs-5 text-decoration-none" style={{marginLeft: "20px"}}
-                        to={links.home}
-                        >
-                        Home
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                            <Link
-                            className="nav-link fs-5 text-decoration-none" style={{marginLeft: "20px"}}
-                            to={links.questions}
-                            >
-                            Preguntas
-                            </Link>
-                    </li>
+
+                        {elements.map((item, index) => {
+                            return(
+                                <li key={index} className="nav-item active">
+                                    <Link
+                                    className="nav-link fs-5 text-decoration-none" style={{marginLeft: "20px"}}
+                                    to={item.url}
+                                    >
+                                        <span>{item.titulo}</span>
+                                    </Link>
+                                </li>
+                            )
+                        })}
+
                         
                     </ul>
                 </div>

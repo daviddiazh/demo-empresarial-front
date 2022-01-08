@@ -54,12 +54,11 @@ const PublicLayout = () => {
 
     return (
         <div>
-            <Navbar elements={publicNavbar} links={{home: "", questions: "/QuestionsPage"}}/>
+            <Navbar elements={publicNavbar}/>
 
             {usuario ? <PrivateLayout /> : <Logueo setUsuario={setUsuario} />}
             
-            <button className="btn btn-light" style={{margin: "50px 0"}} onClick={handler}><img src={imggoogle} width={25} height={25}></img> Iniciar con Google</button>
-            <Outlet/>
+            <button className="btn btn-danger" style={{margin: "50px 0"}} onClick={handler}><img src={imggoogle} width={25} height={25}></img> Iniciar con Google</button>
             <Footer/>
         </div>
     )

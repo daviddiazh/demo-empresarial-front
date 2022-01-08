@@ -16,14 +16,17 @@ const QuestionsPagePrivate = () => {
     
     return (
         <>
+
+            <h1 className='m-5'>Preguntas</h1>
+
             <input
-                className="form-control  mb-3 "
-                placeholder="Buscar preguntas por categoria o estado"
+                className="form-control  mb-5 m-auto"
+                placeholder="Buscar preguntas por categoria o estado..."
                 type="text"
                 onChange={(e) => setFiltro(e.target.value.toUpperCase())}
-            ></input>
+                style={{width: "500px"}}
+            ></input>   
 
-            <h1>Preguntas</h1>
             {error&& <h1>{error}</h1>}
             {questions && questions.filter( busqueda => busqueda.category.includes(filtro) || busqueda.type.includes(filtro) ).map((question)=>{
                 return(
@@ -31,6 +34,7 @@ const QuestionsPagePrivate = () => {
                 )
                
             })}
+            
         </>
     )
 }
