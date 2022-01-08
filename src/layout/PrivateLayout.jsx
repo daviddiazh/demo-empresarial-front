@@ -39,7 +39,7 @@ const PrivateLayout = () => {
         {state.user
         ?(<div>
             
-            <Navbar elements={privateNavbar} />
+            <Navbar elements={privateNavbar} links={{home: "/private/QuestionsPage"}}/>
 
             <p>Bienvenido { state.user.displayName }</p>
             

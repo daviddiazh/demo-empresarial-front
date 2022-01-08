@@ -9,7 +9,7 @@ import { privateNavbar } from "../utils/NavbarList";
 import PrivateLayout from "../layout/PrivateLayout";
 import userEvent from "@testing-library/user-event";
 
-const Navbar = ({elements}) => {
+const Navbar = ({elements, links}) => {
 
     const state = useSelector(state=>state.auth)
     const dispatch = useDispatch()
@@ -47,9 +47,9 @@ const Navbar = ({elements}) => {
                     <li className="nav-item active">
                         <Link
                         className="nav-link fs-5 text-decoration-none" style={{marginLeft: "20px"}}
-                        to={`/prueba`}
+                        to={links.home}
                         >
-                        prueba
+                        Home
                         </Link>
                     </li>
                     <li className="nav-item">

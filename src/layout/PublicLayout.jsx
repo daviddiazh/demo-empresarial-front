@@ -54,7 +54,7 @@ const PublicLayout = () => {
 
     return (
         <div>
-            <Navbar elements={publicNavbar}/>
+            <Navbar elements={publicNavbar} links={{home: ""}}/>
 
             {usuario ? <PrivateLayout /> : <Logueo setUsuario={setUsuario} />}
             
