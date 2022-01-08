@@ -2,14 +2,13 @@ import {Link} from "react-router-dom"
 import logo from "../media/iconoddhtransparente.png";
 import { app } from "../service/firebase"
 import { useNavigate } from "react-router-dom"
-import { useEffect } from "react"
 import {  useDispatch ,useSelector  } from "react-redux"
 import {loggedAction,logoutAction} from "../actions/AuthorActions"
 import { privateNavbar } from "../utils/NavbarList";
-import PrivateLayout from "../layout/PrivateLayout";
+import PublicLayout from "../layout/PublicLayout";
 import userEvent from "@testing-library/user-event";
 
-const Navbar = ({elements, links}) => {
+const Navbar = ({elements, links, linksPrivate}) => {
 
     const state = useSelector(state=>state.auth)
     const dispatch = useDispatch()
@@ -53,13 +52,14 @@ const Navbar = ({elements, links}) => {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link
-                        className="nav-link fs-5 text-decoration-none" style={{marginLeft: "20px"}}
-                        to={`/prueba2`}
-                        >
-                        prueba 2
-                        </Link>
+                            <Link
+                            className="nav-link fs-5 text-decoration-none" style={{marginLeft: "20px"}}
+                            to={links.questions}
+                            >
+                            Preguntas
+                            </Link>
                     </li>
+                        
                     </ul>
                 </div>
                 
