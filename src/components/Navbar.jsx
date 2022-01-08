@@ -25,7 +25,7 @@ const Navbar = ({elements, links, linksPrivate}) => {
     return (
         <div>
 
-            <nav className="navbar navbar-expand-lg navbar-dark bg-info">
+            <nav className="navbar navbar-expand-lg navbar-dark" style={{background: "#0d6efd"}}>
                 
                 <img src={logo} alt="" width={80} height={60} />
                 
@@ -38,7 +38,7 @@ const Navbar = ({elements, links, linksPrivate}) => {
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
-                    <span className="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon" style={{color: "#000"}}></span>
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">

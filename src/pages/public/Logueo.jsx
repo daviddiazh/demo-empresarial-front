@@ -37,20 +37,20 @@ export const Logueo = (props) => {
 
     return (
         <div>
-            <h1>{ isRegistrando ? "Regístrate" : "Iniciar Sesión" }</h1>
-            <form onSubmit={submitHandler}>
-                <input type="email" id="emailField" placeholder='Correo Electrónico'/>
-                <input type="password" id="passwordField" placeholder='Contraseña' />
-                <button type='submit'>
+            <form onSubmit={submitHandler} className='mt-5 py-5 px-5 form-ingreso'>
+                <h1 style={{margin: "50px"}}>{ isRegistrando ? "Regístrate" : "Iniciar Sesión" }</h1>
+                <input type="email" id="emailField" placeholder='Correo Electrónico' className="form-control"/>
+                <input type="password" id="passwordField" placeholder='Contraseña' className="form-control" /> 
+                <button type='submit' className="btn btn-primary" style={{background: "#0d6efd", border: "none"}}>
                     {isRegistrando ? "Regístrate" : "Iniciar sesión"}
                 </button>
-            </form>
-            <button type='submit' onClick={() => setIsRegistrando(!isRegistrando) }>
+                <button type='submit' onClick={() => setIsRegistrando(!isRegistrando)} className="btn btn-light" style={{background: "", border: "none"}}>
                 { isRegistrando 
                     ? "¿Ya tienes cuenta? ¡Inicia sesión!" 
                     : "¿No tienes cuenta? ¡Registrate, es gratis!"
                 }
             </button>
+            </form>
         </div>
     )
 }

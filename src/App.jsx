@@ -21,7 +21,7 @@ function App() {
 
   return (
     
-    <div className="App">
+    <div className="App" style={{background: "#f0f2f5"}}>
    
     <BrowserRouter>
       <Routes>
