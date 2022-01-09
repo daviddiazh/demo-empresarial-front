@@ -2,6 +2,7 @@ import { questionsLoading ,questionsLoadSucces,questionsLoadError } from "../../
 import {oneQuestionLoadSucces , oneQuestionLoadError} from "../../actions/OneQuestionActions";
 import { myQuestionsLoadSucces, myQuestionsLoading,myQuestionsLoadError } from "../../actions/MyQuestionsActions";
 import axios from "axios";
+import CreateQuestion from "../../pages/private/CreateQuestion";
 
 export const loadAllQuestion=()=>(dispatch)=>{
   
@@ -38,7 +39,7 @@ export const loadById=(id)=>(dispatch)=>{
 }
 
 
-export const postQuestion=(question)=>{
+export const postQuestion = (question, navigate) =>{
 
     const options = {
         method: 'POST',
@@ -48,7 +49,7 @@ export const postQuestion=(question)=>{
       };
       
       axios.request(options).then(function (response) {
-        console.log(response.data);
+        navigate("/private/QuestionsPage")
       }).catch(function (error) {
         console.error(error);
       });

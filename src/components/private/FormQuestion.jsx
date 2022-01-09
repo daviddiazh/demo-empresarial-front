@@ -1,27 +1,36 @@
 import useFormData from '../../hooks/UseFormData'
 import { postQuestion } from '../../app/middleware/payloadQuestions';
 import { useSelector } from 'react-redux';
+import TextEditor from "../../hooks/TextEditor";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const FormQuestion = () => {
 
-    const state =useSelector(state=>state.auth)
+  const state = useSelector(state=>state.auth)
+  const navigate = useNavigate();
 
-    const{form, formData, updateFormData} = useFormData();
+  const [ body, setBody ] = useState("");
 
-    const submitForm = (e) => {
-        e.preventDefault();
-        postQuestion(formData)
-      }
+  const submitForm = (e) => {
+      e.preventDefault();
+      postQuestion(navigate);
+      setBody("");
+  }
 
     return(
         <div>
             <h1>Este es un fomulario de question.</h1>
 
-            <form ref={form} onSubmit={submitForm} onChange={updateFormData}>
+            <form onSubmit={submitForm} >
                 <label>Añadir nueva pregunta</label>
-                <input required name="question" type="text" placeholder='Ingresa una pregunta acá'></input>
-                <input  required name="userId" hidden type="text" value={state.user.uid} placeholder='Ingresa una pregunta acá'></input>
+                {/* <input required name="question" type="text" placeholder='Ingresa una pregunta acá'></input> */}
+
+                {/* <input  required name="userId" hidden type="text" value={state.user.uid} placeholder='Ingresa una pregunta acá'></input> */}
+
+                <TextEditor body={body} setBody={setBody} />
+
                 <label className=" font-medium">Type</label>
                 <select required className="" name="type" defaultValue="Type">
                   <option disabled type="String" value="">Type</option>
