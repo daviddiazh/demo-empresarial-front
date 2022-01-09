@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import ReactQuill from 'react-quill';
 import '../../../node_modules/react-quill/dist/quill.snow.css';
 
-const QuestionsPrivate = ({question}) => {  
+const QuestionsPrivate = ({ question, deleteQuestion }) => {  
 
     
     return(
@@ -18,6 +18,7 @@ const QuestionsPrivate = ({question}) => {
                         <th>Pregunta</th>
                         <th>Estado Pregunta</th>
                         <th>Ver Pregunta</th>
+                        <th>Eliminar Pregunta</th>
                     </tr>
                 </thead>
                 <thead>
@@ -35,11 +36,23 @@ const QuestionsPrivate = ({question}) => {
                         <td>{<Link to={`/private/question/${question.id}`} className="btn btn-primary" style={{background: "#0d6efd", border: "none"}}>
                             Ver Pregunta
                         </Link>}</td>
+                        <td>
+                            {deleteQuestion &&  (
+                                <button className="btn btn-danger" 
+                                    id={question.id}
+                                    onClick={() => deleteQuestion(question.id)}
+                                    >Eliminar Pregunta
+                                </button>
+                            )}
+                        </td>
                     </tr>
                 </thead>
                 
                 
+                
             </table>
+
+            
 
 
             
