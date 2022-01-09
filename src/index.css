@@ -15,3 +15,11 @@ body {
   box-shadow: #cecece 3px 3px 3px 1px;
 }
 
+.texto-enriquecido{
+  margin: 0 200px;
+}
+
+.respuestas{
+  margin: 20px 300px;
+}
+

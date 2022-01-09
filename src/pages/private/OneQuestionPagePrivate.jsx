@@ -20,11 +20,15 @@ const OneQuestionPagePrivate = () => {
 
     return (
         <>  
-            <h1>Pregunta</h1>
+            <h1 className="mt-5">Pregunta</h1>
             {oneQuestion && 
             <>
                  <OneQuestionPrivate oneQuestion={oneQuestion}/>
+
+                <h4>Responder a esta pregunta</h4>
+
                  <FormAnswer idQuestion={oneQuestion.id}></FormAnswer>
+                 <h3>Respuestas de esta pregunta</h3>
                  {oneQuestion.answers&&oneQuestion.answers.map((answer)=>{
                      return(
                          <ViewAnswer key={answer.id} answer={answer} />

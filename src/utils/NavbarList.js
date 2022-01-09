@@ -14,5 +14,11 @@ export const privateNavbar=[
     {
         titulo: 'Lista Preguntas',
         url:'/private/QuestionsPage/',
-    }
+    },
+
+    {
+        titulo: 'Crear Pregunta',
+        url:'/private/CreateQuestion/',
+    },
+
 ];

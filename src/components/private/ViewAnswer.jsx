@@ -14,6 +14,7 @@ const ViewAnswer = ({answer}) => {
                 placeholder='Ingresa una pregunta/respuesta'
                 value={answer.answer}
                 modules={ViewAnswer.modules}
+                className='respuestas'
             />
 
             </div>

@@ -21,11 +21,12 @@ const TextEditor = ({body, setBody}) => {
         <div>
             <form>
                 <ReactQuill 
-                    placeholder='Ingresa una pregunta/respuesta'
+                    placeholder='Escribe acá'
                     modules={TextEditor.modules}
                     formats={TextEditor.formats}
                     onChange={handlerBody}
                     value={body}
+                    className='texto-enriquecido'
                 />
             </form>
         </div>

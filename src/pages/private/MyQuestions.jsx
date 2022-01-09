@@ -21,14 +21,13 @@ const MyQuestions = () => {
 
     return (
         <>
-        {myQuestions && myQuestions.map((question)=>{
-            return(
-                <QuestionsPrivate key={question.id} question={question}/>
-                )
-        })}
+            {myQuestions && myQuestions.map((question)=>{
+                return(
+                    <QuestionsPrivate key={question.id} question={question}/>
+                    )
+            })}
         
-        
-        
+            
         
             {error && <h1> Error {error} </h1>}
 

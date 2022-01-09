@@ -5,7 +5,7 @@ const QuestionsPrivate = ({question}) => {
 
     
     return(
-        <div className='question' style={{margin: "0 100px"}}>
+        <div className='question' style={{margin: "0 200px"}}>
 
             <table className="table table-bordered table-striped">
 
