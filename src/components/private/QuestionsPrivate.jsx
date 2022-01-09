@@ -1,6 +1,9 @@
 import React, { useState,useEffect } from 'react';
 import { Link } from "react-router-dom"
 
+import ReactQuill from 'react-quill';
+import '../../../node_modules/react-quill/dist/quill.snow.css';
+
 const QuestionsPrivate = ({question}) => {  
 
     
@@ -20,7 +23,14 @@ const QuestionsPrivate = ({question}) => {
                 <thead>
                     <tr>
                         <td>{question.category}</td>
-                        <td>{question.question}</td>
+                        {/* <td>{question.question}</td> */}
+                        <td><ReactQuill className='quill-editor'
+                            readOnly='true'
+                            preserveWhitespace='false'
+                            value={question.question}
+                            modules={QuestionsPrivate.modules}
+                            className='respuestas'
+                        /></td>
                         <td>{question.type}</td>
                         <td>{<Link to={`/private/question/${question.id}`} className="btn btn-primary" style={{background: "#0d6efd", border: "none"}}>
                             Ver Pregunta
@@ -43,4 +53,5 @@ const QuestionsPrivate = ({question}) => {
     )
 }
 
+QuestionsPrivate.modules = {toolbar: false}
 export default QuestionsPrivate

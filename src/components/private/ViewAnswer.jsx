@@ -11,7 +11,6 @@ const ViewAnswer = ({answer}) => {
             <ReactQuill className='quill-editor'
                 readOnly='true'
                 preserveWhitespace='false'
-                placeholder='Ingresa una pregunta/respuesta'
                 value={answer.answer}
                 modules={ViewAnswer.modules}
                 className='respuestas'

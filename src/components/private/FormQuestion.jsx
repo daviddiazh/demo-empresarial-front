@@ -7,55 +7,51 @@ import { useNavigate } from 'react-router-dom';
 
 
 const FormQuestion = () => {
+  const navigate = useNavigate()
 
-  const state = useSelector(state=>state.auth)
-  const navigate = useNavigate();
+    const state =useSelector(state=>state.auth)
 
-  const [ body, setBody ] = useState("");
+    const [ body, setBody ] = useState("");
 
-  const submitForm = (e) => {
-      e.preventDefault();
-      postQuestion(navigate);
-      setBody("");
-  }
+    const{form, formData, updateFormData} = useFormData();
+
+    const submitForm = (e) => {
+        e.preventDefault();
+        console.log(form.current[1].value);
+        const envioDatos = {
+          userId: form.current[0].value,
+          question: body,
+          type: form.current[1].value,
+          category: form.current[2].value
+        }
+        postQuestion(envioDatos,navigate)
+    }
 
     return(
         <div>
             <h1>Este es un fomulario de question.</h1>
 
-            <form onSubmit={submitForm} >
+            <form ref={form} onSubmit={submitForm} onChange={updateFormData}>
                 <label>Añadir nueva pregunta</label>
                 {/* <input required name="question" type="text" placeholder='Ingresa una pregunta acá'></input> */}
-
-                {/* <input  required name="userId" hidden type="text" value={state.user.uid} placeholder='Ingresa una pregunta acá'></input> */}
-
-                <TextEditor body={body} setBody={setBody} />
-
+                <TextEditor body={body} setBody={setBody}/>
+                <input  required name="userId" hidden type="text" value={state.user.uid} placeholder='Ingresa una pregunta acá'></input>
                 <label className=" font-medium">Type</label>
-                <select required className="" name="type" defaultValue="Type">
-                  <option disabled type="String" value="">Type</option>
+                <select required className="" name="type" defaultValue="">
+                  <option disabled type=""value=""></option>
                   <option type="String">OPEN</option>
                   <option type="String">OPINION</option>
-                  <option type="String">WHITH_RESULT</option>
-                  <option type="String">WHITH_EVIDENCE</option>
+                  <option type="String">WITH_RESULT</option>
+                  <option type="String">WITH_EVIDENCE</option>
                 </select>
-                <label className=" font-medium">Category</label>
-                <select required name="category"  defaultValue="Category"className="">
-                  <option disabled type="String"  value="">Category</option>
-                  <option type="String">ARTES</option>
-                  <option type="String">CIENCIAS_AGRARIAS</option>
-                  <option type="String">CIENCIAS_ECONOMICAS</option>
-                  <option type="String">CIENCIAS_EXACTAS_NATURALES</option>
-                  <option type="String">CIENCIAS_FARMACEUTICAS_ALIMENTARIAS</option>
-                  <option type="String">CIENCIAS_SOCIALES_HUMANAS</option>
-                  <option type="String">COMUNICACIONES</option>
-                  <option type="String">DERECHO_CIENCIAS_POLITICAS</option>
-                  <option type="String">EDUCACION</option>
-                  <option type="String">ENFERMERIA</option>
-                  <option type="String">INGENIERIA</option>
-                  <option type="String">MEDICINA</option>
-                  <option type="String">ODONTOLOGIA</option>
-                  <option type="String">SALUD_PUBLICA</option>
+                <label className="font-medium">Category</label>
+                <select required name="category" defaultValue="">
+                  <option disabled type=""value=""></option>
+                  <option type="String">TECHNOLOGY_AND_COMPUTER</option>
+                  <option type="String">SCIENCES</option>
+                  <option type="String">SOFTWARE_DEVELOPMENT</option>
+                  <option type="String">SOCIAL_SCIENCES</option>
+                  <option type="String">LANGUAGE</option>
                 </select>
                 <button type="submit">Enviar</button>
             </form>
@@ -64,5 +60,6 @@ const FormQuestion = () => {
     )
 
 }
+
 
 export default FormQuestion
