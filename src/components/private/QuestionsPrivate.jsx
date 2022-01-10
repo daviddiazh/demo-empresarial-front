@@ -48,7 +48,8 @@ const QuestionsPrivate = ({ question, deleteQuestion }) => {
                                 </button>
                             )}
                         </td>
-                        {/* <td><img src={state.user.photo} alt="" /></td> */}
+                        {/* <td><img src={state.user.photo} alt="" /></td>
+                        <td>{state.user.name}</td> */}
                     </tr>
                 </thead>
    

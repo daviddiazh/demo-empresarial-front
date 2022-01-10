@@ -23,7 +23,6 @@ const QuestionsPublic = ({ question, deleteQuestion }) => {
                 <thead>
                     <tr>
                         <td>{question.category}</td>
-                        {/* <td>{question.question}</td> */}
                         <td><ReactQuill className='quill-editor'
                             readOnly='true'
                             preserveWhitespace='false'

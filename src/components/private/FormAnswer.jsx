@@ -27,9 +27,6 @@ const FormAnswer = ({idQuestion}) => {
         <div>
             <form onSubmit={submitForm} onChange={updateFormData}>
                 <TextEditor body={body} setBody={setBody}/>
-                {/* <input required name="answer" type="text" placeholder='Ingresa acá una respuesta'></input> */}
-                {/* <input hidden name="userId" type="text" value={state.user.uid} ></input>
-                <input hidden name="questionId" type="text" value={idQuestion} ></input> */}
                 <button type="submit" className="btn btn-success" style={{border: "none", margin: "30px 0"}}>Enviar Respuesta</button>
             </form>
         </div>

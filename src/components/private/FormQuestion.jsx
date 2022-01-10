@@ -34,7 +34,6 @@ const FormQuestion = () => {
             <h1 className='m-5'>Añade una nueva pregunta</h1>
 
             <form ref={form} onSubmit={submitForm} onChange={updateFormData}>
-                {/* <input required name="question" type="text" placeholder='Ingresa una pregunta acá'></input> */}
                 <TextEditor body={body} setBody={setBody}/>
                 <input  required name="userId" hidden type="text" value={state.user.uid} placeholder='Ingresa una pregunta acá'></input>
                 <label className=" font-medium">Estado de la pregunta</label>
