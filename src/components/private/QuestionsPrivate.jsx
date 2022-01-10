@@ -4,7 +4,11 @@ import { Link } from "react-router-dom"
 import ReactQuill from 'react-quill';
 import '../../../node_modules/react-quill/dist/quill.snow.css';
 
+import { useDispatch,useSelector } from "react-redux";
+
 const QuestionsPrivate = ({ question, deleteQuestion }) => {  
+
+    const state = useSelector(state=>state.auth)
 
     
     return(
@@ -24,7 +28,6 @@ const QuestionsPrivate = ({ question, deleteQuestion }) => {
                 <thead>
                     <tr>
                         <td>{question.category}</td>
-                        {/* <td>{question.question}</td> */}
                         <td><ReactQuill className='quill-editor'
                             readOnly='true'
                             preserveWhitespace='false'
@@ -45,6 +48,7 @@ const QuestionsPrivate = ({ question, deleteQuestion }) => {
                                 </button>
                             )}
                         </td>
+                        {/* <td><img src={state.user.photo} alt="" /></td> */}
                     </tr>
                 </thead>
    

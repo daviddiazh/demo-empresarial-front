@@ -12,6 +12,8 @@ const QuestionsPagePrivate = () => {
     },[])
 
     const [ filtro, setFiltro ] = useState("");
+
+    
   
     
     return (
@@ -25,7 +27,9 @@ const QuestionsPagePrivate = () => {
                 type="text"
                 onChange={(e) => setFiltro(e.target.value.toUpperCase())}
                 style={{width: "500px"}}
-            ></input>   
+            ></input>  
+            
+            
 
             {error&& <h1>{error}</h1>}
             {questions && questions.filter( busqueda => busqueda.category.includes(filtro) || busqueda.type.includes(filtro) ).map((question)=>{
