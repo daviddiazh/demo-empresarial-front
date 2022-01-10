@@ -21,16 +21,15 @@ const ViewAnswer = ({answer, deleteAnswer}) => {
 
             </div>
             <div className="col-1">
-                            {deleteAnswer && (
+                {deleteAnswer && (
                                 
-                                <button
-                                    className="btn-danger"
-                                    id={answer.id}
-                                    onClick={() => deleteAnswer(answer.id)}>
+                    <button
+                        className="btn-danger"
+                        id={answer.id}
+                        onClick={() => deleteAnswer(answer.id)}>
                                         Eliminar Respuesta
-                                </button>
-                            )}
-                            {console.log(answer.id, "id")}
+                    </button>
+                )}
             </div>
         
         </div>

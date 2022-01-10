@@ -9,7 +9,6 @@ import ViewAnswer from "../../components/private/ViewAnswer";
 const OneQuestionPagePrivate = () => {
     const {id}=useParams();
     
-
     const dispatch = useDispatch()
     const {oneQuestion} = useSelector(state => state.oneQuestion)
 

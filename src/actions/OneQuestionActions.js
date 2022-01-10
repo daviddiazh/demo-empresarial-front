@@ -15,7 +15,7 @@ export const oneQuestionLoadError=(error)=>{
     }
 }
 
-export const oneQuestionsLoading=()=>{
+export const oneQuestionsLoading = () => {
     return {
         type:ActionsTypeOneQuestion.LOADING_QUESTION
     }
