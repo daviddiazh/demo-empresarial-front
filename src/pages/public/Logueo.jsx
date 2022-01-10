@@ -9,7 +9,6 @@ export const Logueo = (props) => {
     const crearUsuario = (correo, contraseña) => {
         app.auth().createUserWithEmailAndPassword(correo, contraseña)
         .then((usuarioFirebase) => {
-            console.log("usuario creado", usuarioFirebase)
             props.setUsuario(usuarioFirebase);
         });
     }

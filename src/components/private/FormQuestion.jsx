@@ -18,7 +18,6 @@ const FormQuestion = () => {
 
     const submitForm = (e) => {
         e.preventDefault();
-        console.log(form.current[1].value);
         const envioDatos = {
           userId: form.current[0].value,
           question: body,

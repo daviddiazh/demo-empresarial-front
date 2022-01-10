@@ -17,7 +17,6 @@ const MyQuestions = (id) => {
     
     useEffect(() =>{
         dispatch(getUserQuestion(user.uid));
-       console.log(myQuestions)
     },[])
 
     const sweetAlert = (id) => {
@@ -44,7 +43,8 @@ const MyQuestions = (id) => {
 
     return (
         <>
-            <h1 className="m-5">Estas son tus preguntas</h1>
+            <h2 className="m-4">Estas son tus preguntas</h2>
+            <p style={{fontSize: "19px"}}>Bienvenid@ <span style={{color: "#0d6efd"}}> {user.name}</span> Email: <span style={{color: "#0d6efd"}}>{user.email}</span></p>
             {myQuestions && myQuestions.map((question)=>{
                 return(
                     <QuestionsPrivate key={question.id} question={question} deleteQuestion={sweetAlert}/>

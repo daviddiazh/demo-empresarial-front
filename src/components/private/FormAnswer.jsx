@@ -17,7 +17,6 @@ const FormAnswer = ({idQuestion}) => {
     const submitForm = (e) => {
         e.preventDefault();
         const formData = { userId: state.user.uid, questionId:idQuestion, answer: body, position: 1 }
-        console.log(formData, "formData");
         dispatch(postAnswer(formData));
         setBody("");
     }

@@ -20,7 +20,7 @@ const ViewAnswer = ({answer, deleteAnswer}) => {
                     className='respuestas'
                 />
 
-                {deleteAnswer && (
+                {state.user.uid === answer.userId ? deleteAnswer && (
                                 
                     <button
                         id={answer.id}
@@ -28,7 +28,7 @@ const ViewAnswer = ({answer, deleteAnswer}) => {
                         onClick={() => deleteAnswer(answer.id)}>
                         Eliminar Respuesta
                     </button>
-                )}
+                ) : null}
 
             </div>
         

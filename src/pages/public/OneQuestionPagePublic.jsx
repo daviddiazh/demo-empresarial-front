@@ -13,7 +13,6 @@ const OneQuestionPagePublic = () => {
 
     useEffect(()=>{
       dispatch(loadById(id))
-      console.log(oneQuestion)
     },[])
   
     return (    
