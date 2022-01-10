@@ -6,7 +6,6 @@ import {  useDispatch ,useSelector  } from "react-redux"
 import {loggedAction,logoutAction} from "../actions/AuthorActions"
 import { privateNavbar } from "../utils/NavbarList";
 import PublicLayout from "../layout/PublicLayout";
-import userEvent from "@testing-library/user-event";
 
 const Navbar = ({elements}) => {
 
@@ -27,7 +26,7 @@ const Navbar = ({elements}) => {
 
             <nav className="navbar navbar-expand-lg navbar-dark" style={{background: "#0d6efd"}}>
                 
-                <img src={logo} alt="" width={80} height={60} />
+                <img style={{marginLeft: "50px"}} src={logo} alt="Logo DDH" width={80} height={60} />
                 
                 <button
                     className="navbar-toggler"
@@ -42,7 +41,7 @@ const Navbar = ({elements}) => {
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav mr-auto">
+                    <ul className="navbar-nav m-auto">
 
                         {elements.map((item, index) => {
                             return(
@@ -62,7 +61,7 @@ const Navbar = ({elements}) => {
                 </div>
                 
                 { state.user 
-                    ? <button className="btn btn-danger" onClick={handler}>Salir</button> 
+                    ? <button style={{marginRight: "50px"}} className="btn btn-danger" onClick={handler}>Salir</button> 
                     : null 
                 }
             </nav>

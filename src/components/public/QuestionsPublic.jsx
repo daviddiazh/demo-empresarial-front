@@ -4,7 +4,7 @@ const QuestionsPublic = ({question}) => {
 
     return(
         <div className='question'>
-            <p>{question.category}  - <small>{question.type}</small></p>
+            <p>{question.category}  - {question.question} - <small>{question.type}</small></p>
             
             {/* {onDelete && (
                 <button className="button right" onClick={() => onDelete(question.id)}>DELETE</button>

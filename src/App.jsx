@@ -23,21 +23,21 @@ function App() {
     
     <div className="App" style={{background: "#f0f2f5"}}>
    
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<PublicLayout/>}>
-            <Route path="QuestionsPage" element={<QuestionsPagePublic/>}/>
-            <Route path="Question/:id" element={<OneQuestionPagePublic/>}/>
-        </Route>
-        <Route path="/private" element={<PrivateLayout/>}>
-            <Route path="HomePage" element={<HomePage/>}/>
-            <Route path="QuestionsPage" element={<QuestionsPagePrivate/>}/>
-            <Route path="Question/:id" element={<OneQuestionPagePrivate/>}/>
-            <Route path="CreateQuestion" element={<CreateQuestion/>}/>
-            <Route path="MyQuestions" element={<MyQuestions/>}/>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<PublicLayout/>}>
+              <Route path="" element={<HomePage/>}/>
+              <Route path="QuestionsPage" element={<QuestionsPagePublic/>}/>
+              <Route path="Question/:id" element={<OneQuestionPagePublic/>}/>
+          </Route>
+          <Route path="/private" element={<PrivateLayout/>}>
+              <Route path="QuestionsPage" element={<QuestionsPagePrivate/>}/>
+              <Route path="Question/:id" element={<OneQuestionPagePrivate/>}/>
+              <Route path="CreateQuestion" element={<CreateQuestion/>}/>
+              <Route path="MyQuestions" element={<MyQuestions/>}/>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 

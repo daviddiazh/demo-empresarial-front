@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const FormQuestion = () => {
+
   const navigate = useNavigate()
 
     const state =useSelector(state=>state.auth)
@@ -29,10 +30,9 @@ const FormQuestion = () => {
 
     return(
         <div>
-            <h1>Este es un fomulario de question.</h1>
+            <h1 className='m-5'>Añade una nueva pregunta</h1>
 
             <form ref={form} onSubmit={submitForm} onChange={updateFormData}>
-                <label>Añadir nueva pregunta</label>
                 {/* <input required name="question" type="text" placeholder='Ingresa una pregunta acá'></input> */}
                 <TextEditor body={body} setBody={setBody}/>
                 <input  required name="userId" hidden type="text" value={state.user.uid} placeholder='Ingresa una pregunta acá'></input>

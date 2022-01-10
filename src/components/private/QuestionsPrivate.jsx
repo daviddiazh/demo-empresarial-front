@@ -18,7 +18,7 @@ const QuestionsPrivate = ({ question, deleteQuestion }) => {
                         <th>Pregunta</th>
                         <th>Estado Pregunta</th>
                         <th>Ver Pregunta</th>
-                        <th>Eliminar Pregunta</th>
+                        
                     </tr>
                 </thead>
                 <thead>
@@ -47,21 +47,10 @@ const QuestionsPrivate = ({ question, deleteQuestion }) => {
                         </td>
                     </tr>
                 </thead>
-                
-                
-                
+   
             </table>
 
             
-
-
-            
-            {/* {onDelete && (
-                <button className="button right" onClick={() => onDelete(question.id)}>DELETE</button>
-            )} */}
-
-            
-        
         </div>
     )
 }

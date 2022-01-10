@@ -3,6 +3,10 @@ export const publicNavbar=[
         titulo: 'Inicio',
         url:'/',
     },
+    {
+        titulo: 'Lista Preguntas',
+        url:'/QuestionsPage',
+    },
 ];
 
 export const privateNavbar=[

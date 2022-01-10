@@ -20,8 +20,7 @@ const QuestionsPagePublic = () => {
             {questions && questions.map((question)=>{
                 return(
                     <QuestionPublic key={question.id} question={question}/>
-                )
-               
+                )    
             })}
         </>
     )
