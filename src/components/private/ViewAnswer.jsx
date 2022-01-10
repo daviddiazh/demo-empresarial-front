@@ -16,20 +16,20 @@ const ViewAnswer = ({answer, deleteAnswer}) => {
                     preserveWhitespace='false'
                     value={answer.answer}
                     modules={ViewAnswer.modules}
+                    theme="bubble"
                     className='respuestas'
                 />
 
-            </div>
-            <div className="col-1">
                 {deleteAnswer && (
                                 
                     <button
-                        className="btn-danger"
                         id={answer.id}
+                        className="btn-danger"
                         onClick={() => deleteAnswer(answer.id)}>
-                                        Eliminar Respuesta
+                        Eliminar Respuesta
                     </button>
                 )}
+
             </div>
         
         </div>

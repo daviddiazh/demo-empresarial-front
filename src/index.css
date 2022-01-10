@@ -20,5 +20,9 @@ body {
 }
 
 .respuestas{
-  margin: 20px 300px;
+  margin: 25px 300px;
+  padding: 5px 0;
+  border-radius: 6px;
+  border: 1px solid #cecece;
 }
+

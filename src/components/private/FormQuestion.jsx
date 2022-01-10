@@ -37,24 +37,24 @@ const FormQuestion = () => {
                 {/* <input required name="question" type="text" placeholder='Ingresa una pregunta acá'></input> */}
                 <TextEditor body={body} setBody={setBody}/>
                 <input  required name="userId" hidden type="text" value={state.user.uid} placeholder='Ingresa una pregunta acá'></input>
-                <label className=" font-medium">Type</label>
-                <select required className="" name="type" defaultValue="">
-                  <option disabled type=""value=""></option>
+                <label className=" font-medium">Estado de la pregunta</label>
+                <select required className="" name="type" defaultValue="" style={{border: "none", margin: "50px 20px", width:"200px", height: "30px"}}>
+                  <option disabled type=""value="">Seleccionar</option>
                   <option type="String">OPEN</option>
                   <option type="String">OPINION</option>
                   <option type="String">WITH_RESULT</option>
                   <option type="String">WITH_EVIDENCE</option>
                 </select>
-                <label className="font-medium">Category</label>
-                <select required name="category" defaultValue="">
-                  <option disabled type=""value=""></option>
+                <label className="font-medium">Categoria</label>
+                <select required name="category" defaultValue="" style={{border: "none", margin: "50px 20px", width:"200px", height: "30px"}}>
+                  <option disabled type=""value="">Seleccionar</option>
                   <option type="String">TECHNOLOGY_AND_COMPUTER</option>
                   <option type="String">SCIENCES</option>
                   <option type="String">SOFTWARE_DEVELOPMENT</option>
                   <option type="String">SOCIAL_SCIENCES</option>
                   <option type="String">LANGUAGE</option>
                 </select>
-                <button type="submit">Enviar</button>
+                <button type="submit" className='btn btn-success '>Enviar</button>
             </form>
 
         </div>

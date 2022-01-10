@@ -51,7 +51,6 @@ const OneQuestionPagePrivate = () => {
                  <FormAnswer idQuestion={oneQuestion.id}></FormAnswer>
                  <h3>Respuestas de esta pregunta</h3>
                  {oneQuestion.answers&&oneQuestion.answers.map((answer)=>{
-                     console.log(answer.id, "id")
                      return(
                          <ViewAnswer key={answer.id} answer={answer} deleteAnswer={deleteAnswers}/>
                      )

@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
+import ReactQuill from 'react-quill';
+import '../../../node_modules/react-quill/dist/quill.snow.css';
+import { useSelector } from 'react-redux';
 
 const OneQuestionPrivate = ({oneQuestion}) => {
 
     return(
         <div className='question' style={{margin: "0 200px"}}>
-            {/* {onDelete && (
-                <button className="button right" onClick={() => onDelete(question.id)}>DELETE</button>
-            )} */}
 
             <table className="table table-bordered table-striped">
 
@@ -20,7 +20,13 @@ const OneQuestionPrivate = ({oneQuestion}) => {
                 <thead>
                     <tr>
                         <td>{oneQuestion.category}</td>
-                        <td>{oneQuestion.question}</td>
+                        <ReactQuill className='quill-editor'
+                            readOnly='true'
+                            preserveWhitespace='false'
+                            value={oneQuestion.question}
+                            modules={OneQuestionPrivate.modules}
+                            theme="bubble"
+                        />
                         <td>{oneQuestion.type}</td>
                     </tr>
                 </thead>
@@ -31,4 +37,5 @@ const OneQuestionPrivate = ({oneQuestion}) => {
     )
 }
 
+OneQuestionPrivate.modules = {toolbar: false}
 export default OneQuestionPrivate

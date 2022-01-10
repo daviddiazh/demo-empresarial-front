@@ -30,7 +30,7 @@ const QuestionsPrivate = ({ question, deleteQuestion }) => {
                             preserveWhitespace='false'
                             value={question.question}
                             modules={QuestionsPrivate.modules}
-                            className='respuestas'
+                            theme="bubble"
                         /></td>
                         <td>{question.type}</td>
                         <td>{<Link to={`/private/question/${question.id}`} className="btn btn-primary" style={{background: "#0d6efd", border: "none"}}>

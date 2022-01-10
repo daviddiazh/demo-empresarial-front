@@ -2,6 +2,7 @@ import { useDispatch,useSelector } from "react-redux"
 import { useEffect } from "react"
 import { getUserQuestion, deleteQuestion } from "../../app/middleware/payloadQuestions"
 import QuestionsPrivate from "../../components/private/QuestionsPrivate"
+import FormQuestion from "../../components/private/FormQuestion"
 
 
  
@@ -43,13 +44,14 @@ const MyQuestions = (id) => {
 
     return (
         <>
+            <h1 className="m-5">Estas son tus preguntas</h1>
             {myQuestions && myQuestions.map((question)=>{
                 return(
                     <QuestionsPrivate key={question.id} question={question} deleteQuestion={sweetAlert}/>
                     )
-            })}
+            }) }
         
-            {error && <h1> Error {error} </h1>}
+            {error && <h1>Ocurrio un error </h1>}
 
         </>
     )
