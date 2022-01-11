@@ -1,44 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# DEMO EMPRESARIAL - CARACTERISTICAS https://app-questions-5b8c6.web.app/
 
-## Available Scripts
+## Ventana de confirmación para eliminar la pregunta y opción de eliminar una respuesta por el dueño (con ventana de confirmación) 
 
-In the project directory, you can run:
+Directrices:
+1. Se debe tener una ventana de confirmación (modal) que me permita confirmar que en realidad quiero eliminar la pregunta, si el usuario confirma se debe eliminar
+2. Se debe tener una opción (botón) que me permita eliminar una respuesta escrita por el dueño de la respuesta, es decir solo el dueño puede eliminar sus respuestas
+3. Se debe tener una ventana de confirmación para eliminar la respuesta
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##Búsqueda y filtros de preguntas
+Directrices:
+1. Por cada pregunta se debe tener un enlace (el mismo nombre de la categoría sería el enlace) donde me permita filtrar por esa las preguntas según estén dentro de esa categoría dentro del mismo listado.
+2. Se debe tener un buscador en la parte superior del listado de preguntas donde me permita buscar por coincidencia o caracteres
+3. El buscador debe ser autocompletado, es decir a la medida que voy buscando debe ir saliendo coincidencias
+4. Si le doy Enter, debe seleccionar la primera que encuentre y llevarlo a la pregunta seleccionada
+5. También es posible que el listado salga dentro de la misma ventana de listado
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+##Agregar un Footer
+Directrices:
+1. Debe contener una descripción general de lo que hace
+2. Debe ser visible en toda la página
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+##Agregar autenticación con usuario y contraseña
+Directrices:
+1. Se debe tener un formulario que permite registrarse con usuario y contraseña
+2. Se debe tener una ventana para hacer login y logout usando usuario y contraseña
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##Notifica cuando existe una respuesta a una pregunta nueva
+Directrices:
+1. Cuando se cree una respuesta se debe enviar un correo electrónico indicando que existe una respuesta a una pregunta en concreto
+2. El template del email puede ser cualquiera
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##Tener el campo de respuesta y de pregunta enriquecido
+Directrices:
+1. Cambiar los textareas a un componente enriquecido
+2. Poder guardar HTML
+3. Poder mostrar formato de código
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+##Agregar un icono/logo a la aplicación
+Directrices:
+1. Seleccionar un icono/logo y ponerlo siempre visible
