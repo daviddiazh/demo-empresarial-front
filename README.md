@@ -8,7 +8,7 @@ Directrices:
 3. Se debe tener una ventana de confirmación para eliminar la respuesta
 
 
-##Búsqueda y filtros de preguntas
+## Búsqueda y filtros de preguntas
 Directrices:
 1. Por cada pregunta se debe tener un enlace (el mismo nombre de la categoría sería el enlace) donde me permita filtrar por esa las preguntas según estén dentro de esa categoría dentro del mismo listado.
 2. Se debe tener un buscador en la parte superior del listado de preguntas donde me permita buscar por coincidencia o caracteres
@@ -17,18 +17,18 @@ Directrices:
 5. También es posible que el listado salga dentro de la misma ventana de listado
 
 
-##Agregar un Footer
+## Agregar un Footer
 Directrices:
 1. Debe contener una descripción general de lo que hace
 2. Debe ser visible en toda la página
 
 
-##Agregar autenticación con usuario y contraseña
+## Agregar autenticación con usuario y contraseña
 Directrices:
 1. Se debe tener un formulario que permite registrarse con usuario y contraseña
 2. Se debe tener una ventana para hacer login y logout usando usuario y contraseña
 
-##Notifica cuando existe una respuesta a una pregunta nueva
+## Notifica cuando existe una respuesta a una pregunta nueva
 Directrices:
 1. Cuando se cree una respuesta se debe enviar un correo electrónico indicando que existe una respuesta a una pregunta en concreto
 2. El template del email puede ser cualquiera
